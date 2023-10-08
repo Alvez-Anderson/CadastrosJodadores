@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <title>FutTec</title>
+
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper blue">
+          <a href="#" class="brand-logo right">FutTec</a>
+          <ul id="nav-mobile" class="left hide-on-med-and-down">
+          <li><a href="/">Cadastro</a></li>
+          <li class="active"><a href="Cadastrarjogador.html">Cadastrar Jogador</a></li>
+          <li><a href="perfil.html">perfil</a></li>
+          </ul>
+        </div>
+      </nav>
+                
+<main class="container">
+<h4>Cadastrar Jogadores</h4>    
+<div class="row">
+<form class="col s12">
+  <div class="row">
+    <div class="input-field col s12">
+      <input id="titulo" type="text" class="validate" minlength="3">
+      <label for="titulo">Nome</label>
+      <span class="helper-text" data-error="Digite o Nome completo. Preencha um nome com pelo menos 3 caracteres" data-success="Nome Valido!"></span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s12">
+      <textarea id="descricao" class="materialize-textarea"></textarea>
+      <label for="descricao">posição</label>
+    </div>
+  </div>
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="pontos" type="number" class="validate" min="16" max="50">
+          <label for="pontos">Idade</label>
+          <span
+          class="helper-text"
+          data-error=
+          "Idade Invalida. Idade Minima  16 anos" data-success="Idade Valida!"></span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="descricao" class="materialize-textarea"></textarea>
+          <label for="descricao">Nome do Time</label>
+        </div>
+      </div>
+
+<div class="row">
+<div class="col">
+  <a href="index.html" class="btn red">cancelar</a>
+</div>
+<div class="col">
+  <a href="index.html" class="btn">Salvar</a>
+</div>
+
+</div>
+
+
+    </form>
+  </div>
+</main>
+
+<div class="fixed-action-btn">
+    <a href="cadastrarjogador.html" class="btn-floating btn-large red">
+      <i class="large material-icons">add</i>
+    </a>
+    </div>
+        
+</body>
+
+</html>
