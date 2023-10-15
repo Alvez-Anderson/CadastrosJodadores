@@ -1,4 +1,10 @@
 body {
-background-image: url(/image/futtec.jpg);
+    background-image: url(/image/futtec.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 50px;
+}
 
+.container h4{
+    color: white;
 }

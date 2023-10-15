@@ -5,13 +5,17 @@ jogadores.forEach(jogador=> criarCard(jogador))
 
 function criarCard(jogador){
 const card = document.createElement("div")
+card.classList.add("col", "s12", "m6")
 card.innerHTML = `
-<div class="card">
-        <div class="card-content">
-          <span class="${jogador.nome}">Nome Jogador</span>
-          <p>${jogador.posicao}</p>
-          <span data-badge-caption="Time" class="badge blue white-text"></span>
-        </div>
+  <div class="card">
+    <div class="card-image">
+    </div>
+    <div class="card-content">
+    <span class="card-title">Nome: ${jogador.nome}</span>
+      <p> Time: ${jogador.nometime}<br>
+          Idade: ${jogador.idade}<br>
+          Posição: ${jogador.posicao} </p>
+    </div>
         <div class="card-action">
           <a href="#"class="btn red accent-4"><i class="material-icons">delete</i>
           </a>
@@ -26,3 +30,4 @@ document.querySelector("#lista-Jogador").appendChild(card)
 
 
 }
+
