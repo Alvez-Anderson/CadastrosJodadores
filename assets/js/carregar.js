@@ -1,11 +1,15 @@
-window.addEventListener("load", () => {
-let jogadores = JSON.parse(localStorage.getItem("jogadores")) || []
-jogadores.forEach(jogador=> criarCard(jogador))
-})
+window.addEventListener("load", atualizar)
+
+function atualizar(){
+  document.querySelector("#lista-Jogador").innerHTML = ""
+  let jogadores = JSON.parse(localStorage.getItem("jogadores")) || []
+  jogadores.forEach(jogador=> criarCard(jogador))
+
+}
 
 function criarCard(jogador){
 const card = document.createElement("div")
-card.classList.add("col", "s12", "m6")
+card.classList.add("col", "s12", "m6", "l4")
 card.innerHTML = `
   <div class="card">
     <div class="card-image">
@@ -17,9 +21,11 @@ card.innerHTML = `
           Posição: ${jogador.posicao} </p>
     </div>
         <div class="card-action">
-          <a href="#"class="btn red accent-4"><i class="material-icons">delete</i>
+          <a href="#"class="btn red accent-4"onClick= "apagar(${jogador.id})">
+          <i class="material-icons">delete</i>
           </a>
-          <a href="#" class="btn green"><i class="material-icons">check</i>
+          <a href="#" class="btn green"onClick= "editar(${jogador.id})">
+          <i class="material-icons">do_not_disturb_alt</i>
           </a></a>
         </div>
       </div>
