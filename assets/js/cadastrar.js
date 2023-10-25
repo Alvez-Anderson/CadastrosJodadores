@@ -1,23 +1,28 @@
 document.querySelector("#botao-cadastrar").addEventListener("click", () => {
- 
-    let jogadores = JSON.parse(localStorage.getItem("jogadores")) || []
+  const nome = document.querySelector("#nome").value;
+  const posicao = document.querySelector("#posicao").value;
+  const idade = document.querySelector("#idade").value;
+  const nometime = document.querySelector("#nometime").value;
 
-    console.log(jogadores)
+  if (nome.trim() === '' || posicao.trim() === '' || idade.trim() === '' || nometime.trim() === '') {
+    alert("Preencha todos os campos antes de cadastrar o jogador.");
+  } else {
+    let jogadores = JSON.parse(localStorage.getItem("jogadores")) || [];
 
-
-    const jogador ={
+    const jogador = {
       id: Date.now(),
-        nome:document.querySelector("#nome").value,
-        posicao:document.querySelector("#posicao").value,
-        idade:document.querySelector("#idade").value,
-        nometime:document.querySelector("#nometime").value,
-        concluido:false
+      nome: nome,
+      posicao: posicao,
+      idade: idade,
+      nometime: nometime,
+      desabilitado: false
     }
-  
-  jogadores.push(jogador)
-  
-    localStorage.setItem("jogadores", JSON.stringify (jogadores))
+
+    jogadores.push(jogador)
+
+    localStorage.setItem("jogadores", JSON.stringify(jogadores))
 
     window.location.href = "index.html"
-})
+  }
+});
 

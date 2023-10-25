@@ -10,6 +10,9 @@ function atualizar(){
 function criarCard(jogador){
 const card = document.createElement("div")
 card.classList.add("col", "s12", "m6", "l4")
+if (jogador.desabilitado) {
+  card.classList.add("disabled");
+}
 card.innerHTML = `
   <div class="card">
     <div class="card-image">
@@ -20,20 +23,18 @@ card.innerHTML = `
           Idade: ${jogador.idade}<br>
           Posição: ${jogador.posicao} </p>
     </div>
-        <div class="card-action">
-          <a href="#"class="btn red accent-4"onClick= "apagar(${jogador.id})">
-          <i class="material-icons">delete</i>
-          </a>
-          <a href="#" class="btn green"onClick= "editar(${jogador.id})">
-          <i class="material-icons">do_not_disturb_alt</i>
-          </a></a>
-        </div>
+     <div class="card-action">
+    <a href="#" class="btn red accent-4" onClick="apagar(${jogador.id})">
+      <i class="material-icons">delete</i>
+    </a>
+    <a href="#" class="btn green" onClick="desabilitar(${jogador.id}, ${!jogador.desabilitado})">
+    <i class="material-icons">do_not_disturb_alt</i>
+    </a>
+    </div>
       </div>
 `
 
 document.querySelector("#lista-Jogador").appendChild(card)
-
-
 
 }
 

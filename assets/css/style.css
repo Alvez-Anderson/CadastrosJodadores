@@ -8,3 +8,8 @@ body {
 .container h4{
     color: white;
 }
+
+.disabled {
+    opacity: 0.5; 
+  }
+  
