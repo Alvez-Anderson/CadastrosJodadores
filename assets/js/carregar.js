@@ -35,6 +35,7 @@ card.innerHTML = `
 `
 
 document.querySelector("#lista-Jogador").appendChild(card)
+calcularEstatisticas()
 
 }
 

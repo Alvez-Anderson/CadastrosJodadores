@@ -11,4 +11,6 @@ const jogador_filtrado = jogadorf.filter(jogador => jogador.id !== id)
 //salvar localstorage
 localStorage.setItem("jogadores", JSON.stringify(jogador_filtrado))
 atualizar()
+calcularEstatisticas()
+
 }

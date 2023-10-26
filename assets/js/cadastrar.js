@@ -23,6 +23,10 @@ document.querySelector("#botao-cadastrar").addEventListener("click", () => {
     localStorage.setItem("jogadores", JSON.stringify(jogadores))
 
     window.location.href = "index.html"
+
+calcularEstatisticas()
+
   }
-});
+
+})
 

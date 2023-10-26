@@ -13,6 +13,8 @@ function desabilitar(id, desabilitado) {
   
     // atualizar a exibição
     atualizar();
+  calcularEstatisticas()
+  
   }
   
   
